@@ -12,8 +12,10 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             
             <div className="w-full px-4 flex items-center flex-col md:flex-row justify-center mobile">
-            <div className="bg-indigo-600 dark:bg-white md:w-[340px] hidden md:block w-[300px] h-[300px] rounded-md md:h-[340px]">
-                <div className="md:left-32 rounded-xl mt-8 md:absolute">
+            <div   className="bg-indigo-600 dark:bg-white md:w-[340px] hidden md:block w-[300px] h-[300px] rounded-md md:h-[340px]">
+                <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine"  className="md:left-32 rounded-xl mt-8 md:absolute">
                 <Image 
   src="/images/hero/1.png" 
   alt="Android icon" 
@@ -25,7 +27,9 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center md:hidden">
-              <div className="w-[320px] h-[320px] absolute mt-9 ml-8">
+              <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className="w-[320px] h-[320px] absolute mt-9 ml-8">
               <Image 
   src="/images/hero/1.png" 
   alt="Android icon" 
@@ -42,7 +46,9 @@ const Hero = () => {
 
               <div
   className="wow fadeInUp md:border-b-2 md:pb-28 mx-auto max-w-[100vw] flex flex-col items-center justify-center text-center mt-16 border-indigo-600 space-y-4 md:space-y-9  md:max-w-[700px]"
-  data-wow-delay=".2s"
+  data-wow-delay=".2s" data-aos="fade-left"
+  data-aos-offset="300"
+  data-aos-easing="ease-in-sine"
 >
   <h1 className="font-extrabold text-2xl text-black md:text-4xl leading-snug dark:text-indigo-600">
     Do everything at Healthcare online
@@ -335,7 +341,9 @@ const Hero = () => {
               <div className="flex items-center justify-center md:hidden">
              
 <div className="w-[320px] h-[320px] bg-indigo-600 rounded-md ">
-<div className="w-[320px] h-[320px] relative bg-black mt-5  ml-6 rounded-md dark:bg-white border-none">
+<div data-aos="fade-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className=" w-[320px] h-[320px] relative bg-black mt-5  ml-6 rounded-md dark:bg-white border-none">
               <Image 
   src="/images/hero/2.png" 
   alt="Android icon" 

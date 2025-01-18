@@ -1,17 +1,27 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-
+import MotionPhone from '../Footer/motionphone'
+import React, { useState, useEffect } from "react";
 const Footer = () => {
+  const [showFirstContainer, setShowFirstContainer] = useState(true);
+
+  useEffect(() => {
+    const toggleContainers = setTimeout(() => {
+      setShowFirstContainer((prev) => !prev);
+    }, 4000); // 4 seconds interval
+
+    return () => clearTimeout(toggleContainers); // Cleanup timeout
+  }, [showFirstContainer]);
   return (
     <>
     <div
-  className="container px-6 mx-auto bg-indigo-600 md:h-[500px] dark:bg-white "
+  className="container px-6 mx-auto bg-indigo-600 md:h-[500px] md:mb-28 dark:bg-white "
   style={{  borderRadius: "20px" }}
 >
   <div className="flex flex-col items-center py-6 lg:h-[36rem] lg:flex-row">
     {/* Left Section */}
-    <div className="lg:w-1/2">
+    <div className="lg:w-1/2 md:space-y-10">
       <h2
         className="text-3xl font-semibold text-gray-100 dark:text-black lg:text-4xl"
         style={{ marginLeft: "50px" }}
@@ -54,32 +64,50 @@ const Footer = () => {
     </div>
 
     {/* Right Section */}
-    <div className="mockup-phone md:h-[600px] md:w-[300px] my-8 md:mb-20">
-  <div className="camera"></div>
-  <div className="display md:border-b-0 bg-white ">
-    <div className="artboard artboard-demo phone-1 bg-white dark:bg-gray-900">
-      <div className=" -left-5 w-[140px] h-[150px] relative">
+    <div className=" md:ml-36">
+{showFirstContainer ? (
+        <div className="mockup-phone md:h-[600px] dark:border-indigo-600  md:w-[300px] my-8 md:mb-20">
+        <div className="camera dark:bg-white"></div>
+        <div className="display md:border-b-0 bg-white ">
+          <div className="artboard artboard-demo phone-1 bg-white dark:bg-gray-900">
+            <div className=" -left-5 w-[140px] h-[150px] relative">
+                   <Image
+               src="/images/logo/logo.svg"
+               alt="logo"
+               width={140}
+               height={30}
+               className="w-full dark:hidden !important"
+             />
              <Image
-         src="/images/logo/logo.svg"
-         alt="logo"
-         width={140}
-         height={30}
-         className="w-full dark:hidden !important"
-       />
-       <Image
-         src="/images/logo/logo-2.svg"
-         alt="logo"
-         width={140}
-         height={30}
-         className="hidden w-full dark:block !important"
-       />
+               src="/images/logo/logo-2.svg"
+               alt="logo"
+               width={140}
+               height={30}
+               className="hidden w-full dark:block !important"
+             />
+             
+
+      {/* <div className="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-violet-500" /> */}
+      <button className="absolute -bottom-44 left-4 right-4 z-10 rounded-lg border-[1px] bg-white dark:text-white dark:bg-gray-900 py-2 text-sm font-medium text-indigo-600 backdrop-blur">
+        Get Started
+      </button>
+
+      {/* <div className="absolute -left-32 -top-32 h-64 w-64 rounded-full bg-violet-500" /> */}
+      <div className="absolute -bottom-[470px] left-[50%] h-96 w-96 -translate-x-[50%] rounded-full bg-black dark:bg-white" />
+            </div>
+            
+          </div>
+          
+        </div>
       </div>
-    </div>
-  </div>
+      ) : (
+        <MotionPhone />
+      )}
 </div>
 
   </div>
 </div>
+
 
       <footer
         className="wow shadow-xl fadeInUp dark:bg-gray-dark relative z-10 bg-white pt-16 md:pt-20 lg:pt-24"
