@@ -12,7 +12,7 @@ const Contact = () => {
               className="wow fadeInUp shadow-three dark:bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s"
             >
-              <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
+              <h2 className="mb-3 text-2xl font-bold text-indigo-600 dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Need Help with Our Systems? Open a Ticket
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">

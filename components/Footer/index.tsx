@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="camera dark:bg-white"></div>
         <div className="display md:border-b-0 bg-white ">
           <div className="artboard artboard-demo phone-1 bg-white dark:bg-gray-900">
-            <div className=" -left-5 w-[140px] h-[150px] relative">
+            <div className=" -left-3 w-[140px] h-[150px] relative">
                    <Image
                src="/images/logo/logo.svg"
                alt="logo"
@@ -241,12 +241,12 @@ const Footer = () => {
     <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
       Contact Us
     </h2>
-    <ul>
-      <li className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color">
-        Phone: <a href="tel:0503688781" className="hover:text-primary">0503688781</a>
+    <ul className="flex flex-col">
+      <li className="dark:text-body-color-dark mb-4 inline-block text-base ">
+        Phone: <a href="tel:0503688781" className="hover:text-black text-indigo-600">0503688781</a>
       </li>
       <li className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color">
-        Email: <a href="mailto:sleek@gmail.com" className="hover:text-primary">sleek@gmail.com</a>
+        Email: <a href="mailto:sleekgeolocation@gmail.com" className="hover:text-black text-indigo-600">sleekgeolocation@gmail.com</a>
       </li>
     </ul>
   </div>

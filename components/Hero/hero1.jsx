@@ -50,12 +50,15 @@ export default function Hero1() {
       data-aos-offset="300"
       data-aos-easing="ease-in-sine"
     >
+      <div className="max-w-[665px] mb-16">
       <h1 className="font-extrabold text-2xl text-black md:text-4xl leading-snug dark:text-indigo-600">
         Do everything at Healthcare online
       </h1>
       <p className="text-center text-gray-600 md:w-[530px] leading-relaxed dark:text-white">
         Experience the convenience of home rapid testing and prescription delivery with Sleek.
       </p>
+      </div>
+     
     
       <div className="flex space-x-3 md:space-x-14 w-full  items-center justify-center">
         <Link href="">

@@ -1,5 +1,6 @@
 const featuresData = [
-  {id: 1,
+  {
+    id: 1,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +18,7 @@ const featuresData = [
       </svg>
     ),
     title: "Inventory Management",
-    paragraph: "Manage stock levels, track inventory in real-time, and reduce waste.",
+    paragraph: "Track inventory levels with precision, minimize stock shortages, and reduce excess waste through real-time monitoring, ensuring optimal resource allocation and improved operational efficiency.",
   },
   {
     id: 2,
@@ -38,7 +39,7 @@ const featuresData = [
       </svg>
     ),
     title: "Analytics and Insights",
-    paragraph: "Gain valuable insights into sales trends and customer behavior.",
+    paragraph: "Gain actionable insights into sales trends, optimize marketing strategies, and understand customer preferences to improve overall business performance and decision-making.",
   },
   {
     id: 3,
@@ -59,10 +60,10 @@ const featuresData = [
       </svg>
     ),
     title: "Point of Sale (POS)",
-    paragraph: "Seamlessly process transactions and track sales with ease.",
+    paragraph: "Streamline payment processes, manage sales transactions efficiently, and integrate financial reporting tools to enhance operational control.",
   },
   {
-    id: 3,
+    id: 4,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -80,9 +81,10 @@ const featuresData = [
       </svg>
     ),
     title: "Geolocation",
-    paragraph: "Track real-time locations for efficient service delivery and enhanced customer experience.",
+    paragraph: "Leverage real-time geolocation tracking for efficient delivery management, timely dispatch, and a better customer experience with reduced delays.",
   },
-  {id: 4,
+  {
+    id: 5,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -100,9 +102,10 @@ const featuresData = [
       </svg>
     ),
     title: "Delivery",
-    paragraph: "Optimize your delivery services with route planning and live tracking for timely and accurate deliveries.",
+    paragraph: "Optimize delivery routes, track shipments in real-time, and ensure accurate, on-time service to boost customer satisfaction.",
   },
-  {id: 5,
+  {
+    id: 6,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -113,7 +116,7 @@ const featuresData = [
       </svg>
     ),
     title: "Prescription Management",
-    paragraph: "Easily handle prescriptions with digital tools that simplify refills, track history, and improve patient experience.",
+    paragraph: "Digitize prescription records, enable faster refills, and enhance patient trust through seamless tracking and accessibility.",
   },
 ];
 

@@ -37,16 +37,23 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         
-<div data-aos="fade-left"
-        data-aos-offset="400"
-        data-aos-easing="ease-in-sine" className="text-center max-w-[665px] mx-auto my-24">
-  <h1 className="text-3xl md:text-4xl font-bold dark:text-white text-black mb-4">
-  What Our Users Says
+      <div
+  data-aos="fade-left"
+  data-aos-offset="400"
+  data-aos-easing="ease-in-sine"
+  className="text-left my-16"
+>
+  <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-white mb-4">
+    What Our Users Say
   </h1>
-  <p className="text-lg text-black dark:text-white">
-  There are countless ways to describe our system, but nothing speaks louder than the voices of our users. While many solutions fall short or become diluted with complexity, our system stands out as a powerful, intuitive, and impactful tool for individuals and communities alike.
+  <p className="text-lg text-black dark:text-white leading-relaxed">
+    There are countless ways to describe our system, but nothing speaks louder
+    than the voices of our users. While many solutions fall short or become
+    diluted with complexity, our system stands out as a powerful, intuitive,
+    and impactful tool for individuals and communities alike.
   </p>
 </div>
+
 
         <div data-aos="fade-top"
         data-aos-offset="300"

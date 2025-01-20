@@ -16,8 +16,8 @@ const AboutPage = () => {
    <div className="bg-white ">
    <section className=" w-full   flex justify-center items-center py-24 pt-28 px-4 bg-white">
   <div className="container  border-2 ring-2 ring-black dark:ring-white dark:bg-black text-center md:text-left flex flex-col md:flex-row rounded-2xl bg-indigo-600 items-center">
-    <div className="text-white space-y-6 md:w-1/2">
-      <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
+    <div className="text-left space-y-6 md:w-1/2">
+      <h1 className="text-4xl text-white font-extrabold leading-tight md:text-5xl">
         About Our Vision for Better Healthcare
       </h1>
       <p className="text-lg md:text-xl text-white/80">
@@ -38,7 +38,7 @@ const AboutPage = () => {
 
 
      <div className="flex container md:space-x-7 md:my-44 my-5 items-center justify-center flex-col md:flex-row">
-     <div className="mockup-phone border-primary">
+     <div className="mockup-phone hidden md:block border-primary">
     <div className="camera"></div>
     <div className="display">
       <div className="artboard artboard-demo phone-1">
@@ -125,7 +125,7 @@ const AboutPage = () => {
       </li>
     </ul>
   </div>
-  <div className="mockup-phone border-primary block md:hidden">
+  <div className="mockup-phone  border-primary block md:hidden">
     <div className="camera"></div>
     <div className="display">
       <div className="artboard artboard-demo phone-1">

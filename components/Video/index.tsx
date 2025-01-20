@@ -12,13 +12,20 @@ const Video = () => {
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
-        <SectionTitle
-          title="We are ready to help"
-          paragraph="Our pharmacy system is designed to improve medication management, provide precise geolocation services, and ensure customer satisfaction with every delivery."
-          center
-          mb="80px"
-        />
-
+       
+ <div
+  data-aos="fade-left"
+  data-aos-offset="400"
+  data-aos-easing="ease-in-sine"
+  className="text-left my-16"
+>
+  <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-white mb-4">
+  We are ready to help
+  </h1>
+  <p className="text-lg text-black dark:text-white leading-relaxed">
+  Our pharmacy system is designed to improve medication management, provide precise geolocation services, and ensure customer satisfaction with every delivery.
+  </p>
+</div>
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div

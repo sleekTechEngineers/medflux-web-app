@@ -13,6 +13,11 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
 
+  // Close the navbar when a menu item is clicked
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+  };
+
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
@@ -57,20 +62,19 @@ const Header = () => {
                 } `}
               >
                 <Image
-  src="/images/logo/logo.svg"
-  alt="logo"
-  width={140}
-  height={30}
-  className="w-full dark:hidden !important"
-/>
-<Image
-  src="/images/logo/logo-2.svg"
-  alt="logo"
-  width={140}
-  height={30}
-  className="hidden w-full dark:block !important"
-/>
-
+                  src="/images/logo/logo.svg"
+                  alt="logo"
+                  width={140}
+                  height={30}
+                  className="w-full dark:hidden !important"
+                />
+                <Image
+                  src="/images/logo/logo-2.svg"
+                  alt="logo"
+                  width={140}
+                  height={30}
+                  className="hidden w-full dark:block !important"
+                />
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -116,6 +120,7 @@ const Header = () => {
                                 ? "text-primary dark:text-white"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
+                            onClick={closeNavbar} // Close navbar on click
                           >
                             {menuItem.title}
                           </Link>
@@ -147,6 +152,7 @@ const Header = () => {
                                   href={submenuItem.path}
                                   key={index}
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  onClick={closeNavbar} // Close navbar on click
                                 >
                                   {submenuItem.title}
                                 </Link>

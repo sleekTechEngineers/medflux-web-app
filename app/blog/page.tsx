@@ -1,6 +1,6 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+
 
 import { Metadata } from "next";
 
@@ -13,11 +13,20 @@ export const metadata: Metadata = {
 const Blog = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="Pharmacy Blogs"
-        description="Explore insights into pharmacy systems, healthcare innovations, and how geolocation is redefining access to medicines and services."
-      />
-
+     
+<div
+  data-aos="fade-left"
+  data-aos-offset="400"
+  data-aos-easing="ease-in-sine"
+  className="text-left my-16"
+>
+  <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-white mb-4">
+  Pharmacy Blogs
+  </h1>
+  <p className="text-lg text-black dark:text-white leading-relaxed">
+  Explore insights into pharmacy systems, healthcare innovations, and how geolocation is redefining access to medicines and services.
+  </p>
+</div>
       <section className="pb-[120px] pt-[120px] mb-44">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">

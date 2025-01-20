@@ -17,11 +17,11 @@ const Pricing = () => {
         <div className="w-full">
         <div data-aos="fade-left"
         data-aos-offset="400"
-        data-aos-easing="ease-in-sine" className="text-center max-w-[665px] mx-auto my-11">
-  <h1 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-indigo-600 mb-4">
+        data-aos-easing="ease-in-sine" className="text-left max-w-[665px] mx-auto my-11">
+  <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-white mb-4">
     Simple and Affordable Pricing
   </h1>
-  <p className="text-lg text-gray-600 dark:text-white">
+  <p className="text-lg text-gray-600 dark:text-indigo-600">
   Our pricing is designed to be simple and accessible for all users, ensuring affordability without compromising on quality. Whether you&apos;re an individual or a business, our plans cater to diverse needs.
   </p>
 </div>
