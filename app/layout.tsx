@@ -3,7 +3,7 @@ import React from 'react'
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
+
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import {  useEffect } from 'react'
@@ -29,12 +29,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
       </head>
 
-      <body className="bg-[#FCFCFC] dark:bg-black font-manrope">
+      <body className="bg-[#FCFCFC] dark:bg-black font-manrope w-full">
         <Providers>
           <Header />
           {children}
           <Footer />
-          <ScrollToTop />
+    
         </Providers>
       </body>
     </html>
