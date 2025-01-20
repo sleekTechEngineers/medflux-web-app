@@ -1,5 +1,5 @@
 const featuresData = [
-  {
+  {id: 1,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,6 +20,7 @@ const featuresData = [
     paragraph: "Manage stock levels, track inventory in real-time, and reduce waste.",
   },
   {
+    id: 2,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +41,7 @@ const featuresData = [
     paragraph: "Gain valuable insights into sales trends and customer behavior.",
   },
   {
+    id: 3,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -60,6 +62,7 @@ const featuresData = [
     paragraph: "Seamlessly process transactions and track sales with ease.",
   },
   {
+    id: 3,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +82,7 @@ const featuresData = [
     title: "Geolocation",
     paragraph: "Track real-time locations for efficient service delivery and enhanced customer experience.",
   },
-  {
+  {id: 4,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +102,7 @@ const featuresData = [
     title: "Delivery",
     paragraph: "Optimize your delivery services with route planning and live tracking for timely and accurate deliveries.",
   },
-  {
+  {id: 5,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path

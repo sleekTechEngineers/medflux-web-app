@@ -8,6 +8,8 @@ const Pricing = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
+    /* eslint-disable react/no-unescaped-entities */
+
     <section id="pricing" className="relative z-10 py-16 mb-56 md:py-20 lg:py-28">
       <div className="container">
         
@@ -18,7 +20,7 @@ const Pricing = () => {
     Simple and Affordable Pricing
   </h1>
   <p className="text-lg text-gray-600 dark:text-white">
-  Our pricing is designed to be simple and accessible for all users, ensuring affordability without compromising on quality. Whether you're an individual or a business, our plans cater to diverse needs.
+  Our pricing is designed to be simple and accessible for all users, ensuring affordability without compromising on quality. Whether you&apos;re an individual or a business, our plans cater to diverse needs.
   </p>
 </div>
 
