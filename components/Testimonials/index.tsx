@@ -5,8 +5,8 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof ",
-    designation: "Founder @Raydo",
+    name: "Mr.Ray ",
+    designation: "Founder @Raydos Pharmacy",
     content:
       "This system has transformed how we operate. It's intuitive, user-friendly, and beautifully designed, allowing our members to focus on what truly matters. A game-changer for community building!",
     image: "/images/blog/blog5.jpg",
@@ -14,8 +14,8 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 2,
-    name: "David Weilium",
-    designation: "Founder @Klan",
+    name: "Mr. Awatey",
+    designation: "Founder @Klan Pharmacy",
     content:
       "Our entire team is amazed by the simplicity and effectiveness of this system. It’s not just clean and distraction-free—it’s a tool that redefines convenience and efficiency.",
     image: "/images/blog/blog2.jpg",
@@ -23,8 +23,8 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Lethium Frenci",
-    designation: "Founder @Hail",
+    name: "Mr. Micheal",
+    designation: "Founder @Hail Pharmacy",
     content:
       "We’ve seen a remarkable improvement in how our members engage and interact thanks to this system. It's intuitive and delivers exactly what we needed to enhance productivity.",
     image: "/images/blog/blog3.jpg",
