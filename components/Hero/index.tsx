@@ -59,10 +59,10 @@ const Hero = () => {
 
   <div className="flex space-x-3 md:space-x-14 w-full  items-center justify-center">
     <Link href="">
-      <button className="flex w-[180px] md:w-[200px] h-[40px] py-2 bg-indigo-600 items-center justify-center text-white font-medium hover:ring-2 hover:ring-indigo-600 hover:bg-black rounded-full hover:border-2 space-x-3">
+      <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 bg-indigo-600 items-center justify-center text-white font-medium hover:ring-2 hover:ring-indigo-600 hover:bg-black rounded-full hover:border-2 space-x-1.5 md:space-x-3">
         <Image
           src="/images/hero/png-apple-logo-9730 1.svg"
-          alt="Apple icon"
+          alt="Android icon"
           width={24}
           height={24}
         />
@@ -71,7 +71,7 @@ const Hero = () => {
     </Link>
 
     <Link href="">
-      <button className="flex w-[180px] md:w-[200px] h-[40px] py-2 bg-black items-center justify-center text-white font-medium hover:ring-2 hover:ring-black hover:bg-indigo-600 rounded-full hover:border-2 space-x-3">
+      <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 bg-black items-center justify-center text-white font-medium hover:ring-2 hover:ring-black hover:bg-indigo-600 rounded-full hover:border-2 space-x-1.5 md:space-x-3">
         <Image
           src="/images/hero/google-play-png-logo-3781 1.svg"
           alt="Android icon"
