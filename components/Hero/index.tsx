@@ -62,6 +62,17 @@ const Hero = () => {
       <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 bg-indigo-600 items-center justify-center text-white font-medium hover:ring-2 hover:ring-indigo-600 hover:bg-black rounded-full hover:border-2 space-x-1.5 md:space-x-3">
         <Image
           src="/images/hero/png-apple-logo-9730 1.svg"
+          alt="Apple icon"
+          width={24}
+          height={24}
+        />
+        <span className="tracking-wider">Download</span>
+      </button>
+    </Link>
+    <Link href="">
+      <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 hover:bg-indigo-600 items-center justify-center text-white font-medium hover:ring-2 hover:ring-indigo-600 bg-black rounded-full hover:border-2 space-x-1.5 md:space-x-3">
+        <Image
+              src="/images/hero/google-play-png-logo-3781 1.svg"
           alt="Android icon"
           width={24}
           height={24}
@@ -70,17 +81,7 @@ const Hero = () => {
       </button>
     </Link>
 
-    <Link href="">
-      <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 bg-black items-center justify-center text-white font-medium hover:ring-2 hover:ring-black hover:bg-indigo-600 rounded-full hover:border-2 space-x-1.5 md:space-x-3">
-        <Image
-          src="/images/hero/google-play-png-logo-3781 1.svg"
-          alt="Android icon"
-          width={26}
-          height={26}
-        />
-        <span className="tracking-wider">Download</span>
-      </button>
-    </Link>
+    
   </div>
 </div>
 
