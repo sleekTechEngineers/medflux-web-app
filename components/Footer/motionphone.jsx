@@ -55,7 +55,9 @@ const HeaderBar = () => {
 
 const Screen = () => {
   return (
-    <div className="relative z-0 grid h-full w-full place-content-center overflow-hidden rounded-[20px] bg-white dark:bg-gray-900">
+    <div data-aos="fade-top"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" className="relative z-0 grid h-full w-full place-content-center overflow-hidden rounded-[20px] bg-white dark:bg-gray-900">
       {/* Example logo from logoispum */}
       <div className="  w-[140px] h-[150px] relative">
                         <Image

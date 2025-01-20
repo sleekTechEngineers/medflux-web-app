@@ -37,7 +37,9 @@ const Testimonials = () => {
     <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         
-<div className="text-center max-w-[665px] mx-auto my-24">
+<div data-aos="fade-left"
+        data-aos-offset="400"
+        data-aos-easing="ease-in-sine" className="text-center max-w-[665px] mx-auto my-24">
   <h1 className="text-3xl md:text-4xl font-bold dark:text-white text-black mb-4">
   What Our Users Says
   </h1>
@@ -46,7 +48,9 @@ const Testimonials = () => {
   </p>
 </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <div data-aos="fade-top"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
           ))}

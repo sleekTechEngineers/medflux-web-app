@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 const SigninPage = () => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden mb-56 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
+      <section data-aos="fade-top"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="relative z-10 overflow-hidden mb-56 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">

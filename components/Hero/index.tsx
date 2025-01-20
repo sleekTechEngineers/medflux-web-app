@@ -413,13 +413,15 @@ const Hero = () => {
 
 <div className="flex container md:space-x-7 md:my-44 my-5 items-center justify-center flex-col md:flex-row">
   
-<div className="mockup-phone border-primary">
+<div data-aos="fade-top"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="mockup-phone border-primary">
   <div className="camera"></div>
   <div className="display">
     <div className="artboard artboard-demo phone-1">
       <video 
         autoPlay 
-        muted 
+        muted  
         loop 
         playsInline 
         className="w-full h-full object-cover"
@@ -433,7 +435,9 @@ const Hero = () => {
 
 
 
-        <div className="mb-16   space-y-2 md:w-[750px] w-[350px] my-16 md:my-0 ">
+        <div data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="mb-16   space-y-2 md:w-[750px] w-[350px] my-16 md:my-0 ">
     <h2 className="mb-6 font-extrabold text-2xl md:text-3xl leading-snug text-indigo-600">Medication Delivery
     Assistance</h2>
     <ul className="list mb-6 space-y-8">
@@ -529,7 +533,9 @@ const Hero = () => {
               </div>
               
 
-              <div className="lg:col-span-5 md:w-full flex flex-col items-center justify-center layout">
+              <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="lg:col-span-5 md:w-full flex flex-col items-center justify-center layout">
   <div className="mb-16 lg:mb-0 xl:mt-16 md:space-y-16 space-y-10">
     <h2 className="mb-6 font-extrabold text-2xl md:text-3xl leading-snug text-indigo-600">
       Searching for medication and get available pharmacies
@@ -605,7 +611,9 @@ const Hero = () => {
 
 
 
-        <div className="">
+        <div data-aos="fade-top"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="">
         <div className="bg-indigo-600 dark:bg-white  md:w-[340px] hidden md:block w-[300px] h-[300px] rounded-md md:h-[340px]">
                 <div className="md:-ml-6 rounded-xl w-[340px] h-[350px]  dark:bg-white bg-black mt-8 md:absolute">
                 <video 

@@ -10,7 +10,9 @@ const Blog = () => {
     >
       <div className="container">
         
-<div className="text-center max-w-[665px] mx-auto my-24">
+<div data-aos="fade-top"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="text-center max-w-[665px] mx-auto my-24">
   <h1 className="text-3xl md:text-4xl font-bold dark:text-white text-black mb-4">
   Latest in Pharmacy and Technology
   </h1>
@@ -18,7 +20,9 @@ const Blog = () => {
   Explore how cutting-edge technologies like geolocation and data systems are transforming pharmacy access and patient care.
   </p>
 </div>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
+        <div data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
           {blogData.map((blog) => (
             <div key={blog.id} className="w-full">
               <SingleBlog blog={blog} />

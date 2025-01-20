@@ -24,7 +24,9 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
              
-<div className="text-center max-w-[665px] mx-auto my-24">
+<div data-aos="fade-top"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="text-center max-w-[665px] mx-auto my-24">
   <h1 className="text-3xl md:text-4xl font-bold dark:text-white text-black mb-4">
   Revolutionizing Pharmacy Services with Geolocation Technology
   </h1>
@@ -32,7 +34,9 @@ const AboutSectionOne = () => {
   Our system combines cutting-edge geolocation  tools with reliable pharmacy services to bring convenience and accessibility to healthcare. From finding nearby pharmacies to real-time updates on medicine availability, we redefine how people access essential health products.
   </p>
 </div>
-              <div
+              <div data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
                 className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
               >

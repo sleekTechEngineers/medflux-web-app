@@ -21,7 +21,9 @@ const Footer = () => {
 >
   <div className="flex flex-col items-center py-6 lg:h-[36rem] lg:flex-row">
     {/* Left Section */}
-    <div className="lg:w-1/2 md:space-y-10">
+    <div data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="lg:w-1/2 md:space-y-10">
       <h2
         className="text-3xl font-semibold text-gray-100 dark:text-black lg:text-4xl"
         style={{ marginLeft: "50px" }}
@@ -67,7 +69,9 @@ const Footer = () => {
     {/* Right Section */}
     <div className=" md:ml-36">
 {showFirstContainer ? (
-        <div className="mockup-phone md:h-[600px] dark:border-indigo-600  md:w-[300px] my-8 md:mb-20">
+        <div data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" className="mockup-phone md:h-[600px] dark:border-indigo-600  md:w-[300px] my-8 md:mb-20">
         <div className="camera dark:bg-white"></div>
         <div className="display md:border-b-0 bg-white ">
           <div className="artboard artboard-demo phone-1 bg-white dark:bg-gray-900">
