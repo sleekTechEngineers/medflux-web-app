@@ -66,7 +66,7 @@ const Hero = () => {
           width={24}
           height={24}
         />
-        <span className="tracking-wider">Download</span>
+        <span className="tracking-wider">Downloaddd</span>
       </button>
     </Link>
     <Link href="">
