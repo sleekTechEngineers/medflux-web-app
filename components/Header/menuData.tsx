@@ -14,6 +14,12 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 2,
+    title: "Search💊 ",
+    path: "/nearbypharmacies",
+    newTab: false,
+  },
+  {
     id: 33,
     title: "Blog",
     path: "/blog",
@@ -21,7 +27,7 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
-    title: "Contact Us",
+    title: "Contact",
     path: "/contact",
     newTab: false,
   },

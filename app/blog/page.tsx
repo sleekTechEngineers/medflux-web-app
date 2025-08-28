@@ -18,13 +18,13 @@ const Blog = () => {
   data-aos="fade-left"
   data-aos-offset="400"
   data-aos-easing="ease-in-sine"
-  className="text-left my-16"
+  className="text-left mx-20 mt-32 my-24"
 >
   <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-white mb-4">
   Pharmacy Blogs
   </h1>
   <p className="text-lg text-black dark:text-white leading-relaxed">
-  Explore insights into pharmacy systems, healthcare innovations, and how geolocation is redefining access to medicines and services.
+  Explore insights into pharmacy systems, healthcare innovations, <br /> and how geolocation is redefining access to medicines and services.
   </p>
 </div>
       <section className="pb-[120px] pt-[120px] mb-44">

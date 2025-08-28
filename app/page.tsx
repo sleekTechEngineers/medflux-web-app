@@ -9,7 +9,9 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
+
 import { Metadata } from "next";
+import Nearby from '../app/nearbypharmacies/page'
 
 export const metadata: Metadata = {
   title: "Sleek",
@@ -28,6 +30,8 @@ export default function Home() {
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />
+      
+      <Nearby/>
       <Pricing />
       <Blog />
       <Contact />

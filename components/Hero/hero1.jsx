@@ -1,340 +1,259 @@
-import Image from 'next/image'
-import Link from "next/link";
+import React from 'react';
+import { Apple, Download, Play, ArrowRight } from "lucide-react";
+import Image from 'next/image';
 
-export default function Hero1() {
+
+export default function Hero() {
   return (
+    
     <>
-      <section
-            id="home"
-            className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
-          >
-            <div className="container">
-              <div className=" flex flex-wrap">
-                
-                <div className="w-full px-4 flex items-center flex-col md:flex-row justify-center mobile">
-                <div   className="bg-indigo-600 dark:bg-white md:w-[340px] hidden md:block w-[300px] h-[300px] rounded-md md:h-[340px]">
-                    <div data-aos="fade-right"
-         data-aos-offset="300"
-         data-aos-easing="ease-in-sine"  className="md:left-32 rounded-xl mt-8 md:absolute">
-                    <Image 
-      src="/images/hero/1.png" 
-      alt="Android icon" 
-      width={340} 
-      height={340} 
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-    />
-    
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center md:hidden">
-                  <div data-aos="fade-right"
-         data-aos-offset="300"
-         data-aos-easing="ease-in-sine" className="w-[320px] h-[320px] absolute mt-9 ml-8">
-                  <Image 
-      src="/images/hero/1.png" 
-      alt="Android icon" 
+    <section className="relative min-h-screen bg-white dark:bg-black  overflow-hidden">
+      {/* Background Elements */}
+
       
-      fill
-            style={{ objectFit: "contain" }}
-    />
-    </div>
-    <div className="w-[320px] h-[320px] bg-indigo-600 rounded-md ">
-    
-                  </div>
-                  </div>
-                  
-    
-                  <div
-      className="wow fadeInUp md:border-b-2 md:pb-28 mx-auto max-w-[100vw] flex flex-col items-center justify-center text-center mt-16 border-indigo-600 space-y-4 md:space-y-9  md:max-w-[700px]"
-      data-wow-delay=".2s" data-aos="fade-left"
-      data-aos-offset="300"
-      data-aos-easing="ease-in-sine"
-    >
-      <div className="max-w-[665px] mb-16">
-      <h1 className="font-extrabold text-2xl text-black md:text-4xl leading-snug dark:text-indigo-600">
-        Do everything at Healthcare online
-      </h1>
-      <p className="text-center text-gray-600 md:w-[530px] leading-relaxed dark:text-white">
-        Experience the convenience of home rapid testing and prescription delivery with Sleek.
-      </p>
-      </div>
-     
-    
-      <div className="flex space-x-3 md:space-x-14 w-full  items-center justify-center">
-        <Link href="">
-          <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 bg-indigo-600 items-center justify-center text-white font-medium hover:ring-2 hover:ring-indigo-600 hover:bg-black rounded-full hover:border-2 space-x-1.5 md:space-x-3">
-            <Image
-              src="/images/hero/png-apple-logo-9730 1.svg"
-              alt="Apple icon"
-              width={24}
-              height={24}
-            />
-            <span className="tracking-wider">Download</span>
-          </button>
-        </Link>
-        <Link href="">
-          <button className="flex w-[140px] md:w-[200px] h-[40px] py-2 hover:bg-indigo-600 items-center justify-center text-white font-medium hover:ring-2 hover:ring-indigo-600 bg-black rounded-full hover:border-2 space-x-1.5 md:space-x-3">
-            <Image
-                  src="/images/hero/google-play-png-logo-3781 1.svg"
-              alt="Android icon"
-              width={24}
-              height={24}
-            />
-            <span className="tracking-wider">Download</span>
-          </button>
-        </Link>
-    
-        
-      </div>
-    </div>
-    
-                 
-                </div>
-               
+      <div className="relative z-10 container mx-auto px-6 py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[600px]">
+          
+          {/* Content Section */}
+          <div className="space-y-8 lg:pr-8">
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm border border-blue-100 rounded-full shadow-sm">
+                <div className="w-2 h-2 bg-indigo-600 rounded-full mr-3 animate-pulse"></div>
+                <span className="text-sm font-medium text-black dark:text-white">Healthcare Reimagined</span>
               </div>
-            </div>
-            <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
-              <svg
-                width="450"
-                height="556"
-                viewBox="0 0 450 556"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="277"
-                  cy="63"
-                  r="225"
-                  fill="url(#paint0_linear_25:217)"
-                />
-                <circle
-                  cx="17.9997"
-                  cy="182"
-                  r="18"
-                  fill="url(#paint1_radial_25:217)"
-                />
-                <circle
-                  cx="76.9997"
-                  cy="288"
-                  r="34"
-                  fill="url(#paint2_radial_25:217)"
-                />
-                <circle
-                  cx="325.486"
-                  cy="302.87"
-                  r="180"
-                  transform="rotate(-37.6852 325.486 302.87)"
-                  fill="url(#paint3_linear_25:217)"
-                />
-                <circle
-                  opacity="0.8"
-                  cx="184.521"
-                  cy="315.521"
-                  r="132.862"
-                  transform="rotate(114.874 184.521 315.521)"
-                  stroke="url(#paint4_linear_25:217)"
-                />
-                <circle
-                  opacity="0.8"
-                  cx="356"
-                  cy="290"
-                  r="179.5"
-                  transform="rotate(-30 356 290)"
-                  stroke="url(#paint5_linear_25:217)"
-                />
-                <circle
-                  opacity="0.8"
-                  cx="191.659"
-                  cy="302.659"
-                  r="133.362"
-                  transform="rotate(133.319 191.659 302.659)"
-                  fill="url(#paint6_linear_25:217)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_25:217"
-                    x1="-54.5003"
-                    y1="-178"
-                    x2="222"
-                    y2="288"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" />
-                    <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                  </linearGradient>
-                  <radialGradient
-                    id="paint1_radial_25:217"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
-                  >
-                    <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                    <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
-                  </radialGradient>
-                  <radialGradient
-                    id="paint2_radial_25:217"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
-                  >
-                    <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                    <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
-                  </radialGradient>
-                  <linearGradient
-                    id="paint3_linear_25:217"
-                    x1="226.775"
-                    y1="-66.1548"
-                    x2="292.157"
-                    y2="351.421"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" />
-                    <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint4_linear_25:217"
-                    x1="184.521"
-                    y1="182.159"
-                    x2="184.521"
-                    y2="448.882"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" />
-                    <stop offset="1" stopColor="white" stopOpacity="0" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint5_linear_25:217"
-                    x1="356"
-                    y1="110"
-                    x2="356"
-                    y2="470"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" />
-                    <stop offset="1" stopColor="white" stopOpacity="0" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint6_linear_25:217"
-                    x1="118.524"
-                    y1="29.2497"
-                    x2="166.965"
-                    y2="338.63"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" />
-                    <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
-              <svg
-                width="364"
-                height="201"
-                viewBox="0 0 364 201"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-                  stroke="url(#paint0_linear_25:218)"
-                />
-                <path
-                  d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
-                  stroke="url(#paint1_linear_25:218)"
-                />
-                <path
-                  d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
-                  stroke="url(#paint2_linear_25:218)"
-                />
-                <path
-                  d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-                  stroke="url(#paint3_linear_25:218)"
-                />
-                <circle
-                  opacity="0.8"
-                  cx="214.505"
-                  cy="60.5054"
-                  r="49.7205"
-                  transform="rotate(-13.421 214.505 60.5054)"
-                  stroke="url(#paint4_linear_25:218)"
-                />
-                <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_25:218"
-                    x1="184.389"
-                    y1="69.2405"
-                    x2="184.389"
-                    y2="212.24"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" stopOpacity="0" />
-                    <stop offset="1" stopColor="#4A6CF7" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint1_linear_25:218"
-                    x1="156.389"
-                    y1="69.2405"
-                    x2="156.389"
-                    y2="212.24"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" stopOpacity="0" />
-                    <stop offset="1" stopColor="#4A6CF7" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint2_linear_25:218"
-                    x1="125.389"
-                    y1="69.2405"
-                    x2="125.389"
-                    y2="212.24"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" stopOpacity="0" />
-                    <stop offset="1" stopColor="#4A6CF7" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint3_linear_25:218"
-                    x1="93.8507"
-                    y1="67.2674"
-                    x2="89.9278"
-                    y2="210.214"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" stopOpacity="0" />
-                    <stop offset="1" stopColor="#4A6CF7" />
-                  </linearGradient>
-                  <linearGradient
-                    id="paint4_linear_25:218"
-                    x1="214.505"
-                    y1="10.2849"
-                    x2="212.684"
-                    y2="99.5816"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#4A6CF7" />
-                    <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                  </linearGradient>
-                  <radialGradient
-                    id="paint5_radial_25:218"
-                    cx="0"
-                    cy="0"
-                    r="1"
-                    gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(220 63) rotate(90) scale(43)"
-                  >
-                    <stop offset="0.145833" stopColor="white" stopOpacity="0" />
-                    <stop offset="1" stopColor="white" stopOpacity="0.08" />
-                  </radialGradient>
-                </defs>
-              </svg>
+              
+              <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 dark:text-white leading-tight tracking-tight">
+                Healthcare
+                <span className="block bg-gradient-to-r from-indigo-600 to-indigo-600 bg-clip-text text-transparent">
+                  At Home
+                </span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-gray-900 dark:text-white leading-relaxed max-w-xl">
+                Experience the future of healthcare with rapid testing, 
+                instant consultations, and prescription delivery—all from the comfort of your home.
+              </p>
             </div>
             
-          </section></>
+            {/* Action Buttons */}
+             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+      {/* iOS Button */}
+      <button className="group relative flex items-center justify-center gap-3 overflow-hidden bg-black hover:bg-gray-900 text-white px-6 py-2 rounded-xl font-medium text-base transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="relative flex items-center gap-3">
+          <Apple className="w-5 h-5 text-white" />
+          <span>Download for iOS</span>
+      
+        </div>
+      </button>
+
+      {/* Android Button */}
+      <button className="group relative flex items-center justify-center gap-3 bg-white hover:bg-slate-50 text-slate-900 px-6 py-2 rounded-xl font-medium text-base border-2 border-slate-200 hover:border-indigo-400 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+        <Play className="w-5 h-5 text-indigo-600 group-hover:text-indigo-700 transition-colors duration-200" />
+        <span>Download for Android</span>
+      </button>
+    </div>
+            
+            {/* Stats */}
+            <div className="flex items-center space-x-8 pt-8 border-t border-slate-200/50">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-violet-500 dark:text-white">50K+</div>
+                <div className="text-sm text-white/10 dark:text-violet-600">Active Users</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-violet-500 dark:text-white">98%</div>
+                <div className="text-sm text-white/10 dark:text-violet-600">Satisfaction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-violet-500 dark:text-white">24/7</div>
+                <div className="text-sm text-white/10 dark:text-violet-600">Support</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Image Section */}
+          <div className="relative">
+            <div className="relative">
+              {/* Main Image Container */}
+              <div className="relative bg-gradient-to-br from-indigo-600 to-indigo-700 dark:bg-black rounded-3xl p-8 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700">
+                <div className="bg-black dark:bg-white rounded-2xl p-6 shadow-inner">
+                  <div className="aspect-square bg-gradient-to-br from-blue-50 to-indigo-50 dark:bg-indigo-600 rounded-xl flex items-center justify-center overflow-hidden">
+  <img
+    src="https://plus.unsplash.com/premium_photo-1661397081309-c98ead2f9e66?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxhY2slMjBwaGFybWFjaXN0JTIwYXQlMjBwaGFybWFjeXxlbnwwfHwwfHx8MA%3D%3D"
+    alt=""
+    className="w-full h-full object-cover"
+  />
+</div>
+
+                </div>
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl animate-bounce">
+                <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-indigo-600 rounded-full"></div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-xl animate-pulse">
+                <div className="flex items-center space-x-2">
+                  <div className="w-6 h-6 bg-blue-100 rounded-full"></div>
+                  <div className="space-y-1">
+                    <div className="w-12 h-2 bg-slate-200 rounded"></div>
+                    <div className="w-8 h-2 bg-slate-200 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+      <section className="bg-white dark:bg-black py-10 px-6 relative z-10 overflow-hidden">
+  {/* Background decorations */}
+  <div className="absolute top-0 left-0 w-full h-full opacity-5">
+    <div className="absolute top-10 left-10 w-32 h-32 bg-indigo-500 rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+  </div>
+
+  <div className="max-w-7xl mx-auto">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Left side - Image and Dashboard */}
+      <div className="relative group">
+        <div className="relative transform transition-all duration-1000 hover:scale-105">
+          {/* Floating animation wrapper */}
+          <div className="animate-bounce-slow">
+            <img 
+              src="/manbb.svg" 
+              alt="Hero SVG" 
+              className="w-[800px] h-[800px] transform transition-all duration-700 hover:rotate-1 
+                         drop-shadow-2xl hover:drop-shadow-3xl filter hover:brightness-110" 
+            />
+          </div>
+          
+          {/* Animated glow effect around image */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 
+                          rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+          
+          {/* Floating particles */}
+          <div className="absolute top-10 right-10 w-4 h-4 bg-indigo-400 rounded-full animate-ping opacity-60"></div>
+          <div className="absolute bottom-20 left-16 w-3 h-3 bg-purple-400 rounded-full animate-ping delay-500 opacity-40"></div>
+          <div className="absolute top-1/2 right-4 w-2 h-2 bg-yellow-400 rounded-full animate-ping delay-1000 opacity-50"></div>
+        </div>
+      </div>
+
+      {/* Right side - Content */}
+      <div className="text-white space-y-8">
+        {/* Title with gradient and slide-in animation */}
+        <div className="transform transition-all duration-1000 translate-y-0 opacity-100">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 
+                         bg-clip-text text-transparent mb-6 transform hover:scale-105 transition-transform duration-300">
+            How It Works
+          </h2>
+        </div>
+
+        {/* Description with fade-in */}
+        <div className="transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+          <p className="text-lg text-gray-900 dark:text-gray-300 mb-10 leading-relaxed hover:text-gray-700 
+                        dark:hover:text-gray-200 transition-colors duration-300">
+            Our platform simplifies the entire supply chain process from listing to delivery
+          </p>
+        </div>
+
+        {/* Steps with staggered animations */}
+        <div className="space-y-8">
+          {/* Step 01 */}
+          <div className="group flex items-start space-x-4 transform transition-all duration-700 delay-300 
+                          translate-x-0 opacity-100 hover:translate-x-2">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full 
+                            flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-indigo-500/25
+                            transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500
+                            animate-pulse hover:animate-none">
+              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">01</span>
+            </div>
+            <div className="flex-1 transform group-hover:translate-x-1 transition-transform duration-300">
+              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-2 
+                             group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-300">
+                Suppliers List Inventory
+              </h3>
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed group-hover:text-gray-700 
+                            dark:group-hover:text-gray-200 transition-colors duration-300">
+                Suppliers upload their products to our comprehensive marketplace platform with detailed
+                specifications and pricing.
+              </p>
+            </div>
+          </div>
+
+          {/* Step 02 */}
+          <div className="group flex items-start space-x-4 transform transition-all duration-700 delay-500 
+                          translate-x-0 opacity-100 hover:translate-x-2">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full 
+                            flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-indigo-500/25
+                            transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500
+                            animate-pulse hover:animate-none delay-200">
+              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">02</span>
+            </div>
+            <div className="flex-1 transform group-hover:translate-x-1 transition-transform duration-300">
+              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-2 
+                             group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-300">
+                Pharmacies Browse & Order
+              </h3>
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed group-hover:text-gray-700 
+                            dark:group-hover:text-gray-200 transition-colors duration-300">
+                Pharmacies easily search, compare, and order the products they need through our user-friendly
+                interface.
+              </p>
+            </div>
+          </div>
+
+          {/* Step 03 */}
+          <div className="group flex items-start space-x-4 transform transition-all duration-700 delay-700 
+                          translate-x-0 opacity-100 hover:translate-x-2">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full 
+                            flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-indigo-500/25
+                            transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500
+                            animate-pulse hover:animate-none delay-500">
+              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">03</span>
+            </div>
+            <div className="flex-1 transform group-hover:translate-x-1 transition-transform duration-300">
+              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-2 
+                             group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-300">
+                AI-Powered Insights
+              </h3>
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed group-hover:text-gray-700 
+                            dark:group-hover:text-gray-200 transition-colors duration-300">
+                Our AI provides smart recommendations and market insights for better purchasing decisions.
+              </p>
+            </div>
+          </div>
+
+          {/* Step 04 */}
+          <div className="group flex items-start space-x-4 transform transition-all duration-700 delay-1000 
+                          translate-x-0 opacity-100 hover:translate-x-2">
+            <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-full 
+                            flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-indigo-500/25
+                            transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500
+                            animate-pulse hover:animate-none delay-700">
+              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">04</span>
+            </div>
+            <div className="flex-1 transform group-hover:translate-x-1 transition-transform duration-300">
+              <h3 className="text-xl font-bold text-indigo-600 dark:text-indigo-400 mb-2 
+                             group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors duration-300">
+                Fast & Reliable Delivery
+              </h3>
+              <p className="text-gray-900 dark:text-gray-300 leading-relaxed group-hover:text-gray-700 
+                            dark:group-hover:text-gray-200 transition-colors duration-300">
+                Get your orders delivered within 48 hours with our dependable logistics network.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </>
   );
 }

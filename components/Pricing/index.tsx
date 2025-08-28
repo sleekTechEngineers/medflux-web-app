@@ -17,7 +17,7 @@ const Pricing = () => {
         <div className="w-full">
         <div data-aos="fade-left"
         data-aos-offset="400"
-        data-aos-easing="ease-in-sine" className="text-left max-w-[665px] mx-auto my-11">
+        data-aos-easing="ease-in-sine" className="text-left max-w-[665px]  my-11">
   <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 dark:text-white mb-4">
     Simple and Affordable Pricing
   </h1>
