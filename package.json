@@ -43,6 +43,8 @@
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
     "date-fns": "4.1.0",
+        "dotenv": "^16.4.5",
+
     "embla-carousel-react": "8.5.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
@@ -69,6 +71,8 @@
   "devDependencies": {
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.33",
+        "@vitejs/plugin-react": "^4.0.3",
+
     "autoprefixer": "^10.4.16",
     "daisyui": "^4.12.23",
     "mini-css-extract-plugin": "^2.9.2",
