@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { Search, MapPin, Star, Phone, Clock, Truck, Shield, Pill, Filter } from "lucide-react"
+import { serverUrl } from '@/components/config';
 
 // TypeScript interfaces
 interface Pharmacy {
@@ -22,12 +23,8 @@ interface Pharmacy {
 interface Medicine {
   id: string
   name: string
-  generic_name?: string
-  dosage: string
   price: number
-  description?: string
   category?: string
-  manufacturer?: string
 }
 
 interface PharmacyMedicine {
@@ -45,148 +42,75 @@ export default function MedicationFinder() {
   const [hasSearched, setHasSearched] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
 
-  // Mock data for demonstration
-  const mockPharmacies: Pharmacy[] = [
-    {
-      id: "1",
-      name: "HealthPlus Pharmacy",
-      address: "123 Main Street, Downtown",
-      phone: "+1 (555) 123-4567",
-      email: "info@healthplus.com",
-      rating: 4.8,
-      delivery_available: true,
-      operating_hours: "8:00 AM - 10:00 PM",
-      is_verified: true,
-      distance: "0.5 miles",
-    },
-    {
-      id: "2",
-      name: "MediCare Central",
-      address: "456 Oak Avenue, City Center",
-      phone: "+1 (555) 987-6543",
-      email: "contact@medicare.com",
-      rating: 4.6,
-      delivery_available: true,
-      operating_hours: "24/7",
-      is_verified: true,
-      distance: "1.2 miles",
-    },
-    {
-      id: "3",
-      name: "QuickMeds Express",
-      address: "789 Pine Road, Westside",
-      phone: "+1 (555) 456-7890",
-      rating: 4.4,
-      delivery_available: false,
-      operating_hours: "9:00 AM - 9:00 PM",
-      is_verified: true,
-      distance: "2.1 miles",
-    },
-    {
-      id: "4",
-      name: "Family Pharmacy",
-      address: "321 Elm Street, Northside",
-      phone: "+1 (555) 234-5678",
-      rating: 4.7,
-      delivery_available: true,
-      operating_hours: "7:00 AM - 11:00 PM",
-      is_verified: false,
-      distance: "1.8 miles",
-    },
-  ]
-
-  const mockMedicines: Medicine[] = [
-    {
-      id: "1",
-      name: "Paracetamol",
-      generic_name: "Acetaminophen",
-      dosage: "500mg",
-      price: 12.99,
-      category: "Pain Relief",
-      manufacturer: "Generic Pharma",
-      description: "Pain reliever and fever reducer",
-    },
-    {
-      id: "2",
-      name: "Ibuprofen",
-      generic_name: "Ibuprofen",
-      dosage: "400mg",
-      price: 15.5,
-      category: "Anti-inflammatory",
-      manufacturer: "MediCorp",
-      description: "Anti-inflammatory pain reliever",
-    },
-    {
-      id: "3",
-      name: "Amoxicillin",
-      generic_name: "Amoxicillin",
-      dosage: "250mg",
-      price: 25.0,
-      category: "Antibiotic",
-      manufacturer: "BioPharm",
-      description: "Antibiotic for bacterial infections",
-    },
-    {
-      id: "4",
-      name: "Vitamin D3",
-      generic_name: "Cholecalciferol",
-      dosage: "1000 IU",
-      price: 18.75,
-      category: "Supplements",
-      manufacturer: "VitaHealth",
-      description: "Vitamin D supplement",
-    },
-  ]
-
+  // Define available categories
   const categories = [
     "all",
     "Pain Relief",
-    "Anti-inflammatory",
-    "Antibiotic",
-    "Supplements",
-    "Cardiovascular",
-    "Digestive",
+    "Antibiotics",
+    "Vitamins",
     "Allergy",
-    "Diabetes",
-  ]
+    "Cold & Flu",
+    "Digestive Health",
+    "Skin Care",
+    "Other"
+  ];
 
   const handleSearch = async () => {
-    if (!searchQuery.trim()) return
+    if (!searchQuery.trim()) return;
 
-    setIsLoading(true)
-    setHasSearched(true)
+    setIsLoading(true);
+    setHasSearched(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const res = await fetch(
+        `${serverUrl}/pharmacy/search-pharmacy-medicine?term=${encodeURIComponent(searchQuery)}`
+      );
 
-    // Mock search logic
-    const results: PharmacyMedicine[] = []
-    const matchingMedicines = mockMedicines.filter(
-      (med) =>
-        med.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        med.generic_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        med.category?.toLowerCase().includes(searchQuery.toLowerCase()),
-    )
+      if (!res.ok) throw new Error("Failed to fetch search results");
+      const data = await res.json();
 
-    matchingMedicines.forEach((medicine) => {
-      mockPharmacies.forEach((pharmacy) => {
-        // Randomly determine availability for demo
-        const inStock = Math.random() > 0.3
-        if (selectedCategory === "all" || medicine.category === selectedCategory) {
-          results.push({
-            pharmacy,
-            medicine,
-            in_stock: inStock,
-            quantity_available: inStock ? Math.floor(Math.random() * 50) + 1 : 0,
-            last_updated: new Date().toISOString(),
-          })
-        }
-      })
-    })
+      console.log("Backend response:", data); // 🔍 Debug
 
-    setSearchResults(results)
-    setIsLoading(false)
-  }
+      // ✅ Map backend response into PharmacyMedicine format
+      const results: PharmacyMedicine[] = data.map((item: any) => ({
+        pharmacy: {
+          id: String(item.pharmacy_id),
+          name: item.pharmacy_name,
+          address: item.pharmacy_location,
+          phone: item.pharmacy_phone ?? "N/A",
+          email: item.pharmacy_email,
+          rating: item.pharmacy_ratings ? parseFloat(item.pharmacy_ratings) : undefined,
+          is_verified: true,
+        },
+        medicine: {
+          id: String(item.medication_id),
+          name: item.medication_name,
+          price: parseFloat(item.price),
+          category: item.category,
+        },
+        in_stock: item.quantity > 0,
+        quantity_available: item.quantity,
+        last_updated: new Date().toISOString(),
+      }));
+
+      // ✅ Apply category filter
+      const filteredResults =
+        selectedCategory === "all"
+          ? results
+          : results.filter(
+              (r) =>
+                r.medicine.category?.toLowerCase() ===
+                selectedCategory.toLowerCase()
+            );
+
+      setSearchResults(filteredResults);
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+      setSearchResults([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
@@ -284,20 +208,15 @@ export default function MedicationFinder() {
                             </div>
                             <div>
                               <h4 className="font-semibold text-black text-lg">
-                                {result.medicine.name} {result.medicine.dosage}
+                                {result.medicine.name}
                               </h4>
-                              {result.medicine.generic_name && (
-                                <p className="text-sm text-gray-600">
-                                  Generic: {result.medicine.generic_name}
-                                </p>
-                              )}
                               <span className="inline-block mt-1 px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
                                 {result.medicine.category}
                               </span>
                             </div>
                           </div>
                           <div className="space-y-2">
-                            <p className="text-2xl font-bold text-black">${result.medicine.price}</p>
+                            <p className="text-2xl font-bold text-black">₵{result.medicine.price}</p>
                             <div className="flex items-center gap-2">
                               <span
                                 className={`px-2 py-1 text-xs font-medium rounded-full ${
@@ -327,9 +246,6 @@ export default function MedicationFinder() {
                                   <MapPin className="h-4 w-4" />
                                   <span>{result.pharmacy.address}</span>
                                 </div>
-                                <div className="flex items-center gap-1">
-                                  <span>{result.pharmacy.distance}</span>
-                                </div>
                               </div>
                               <div className="flex items-center gap-4 text-sm text-gray-600">
                                 <div className="flex items-center gap-1">
@@ -338,13 +254,13 @@ export default function MedicationFinder() {
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <Clock className="h-4 w-4" />
-                                  <span>{result.pharmacy.operating_hours}</span>
+                                  <span>{result.pharmacy.operating_hours ?? "N/A"}</span>
                                 </div>
                               </div>
                             </div>
                             <div className="flex items-center gap-1">
                               <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                              <span className="font-medium text-black">{result.pharmacy.rating}</span>
+                              <span className="font-medium text-black">{result.pharmacy.rating ?? "N/A"}</span>
                             </div>
                           </div>
 
