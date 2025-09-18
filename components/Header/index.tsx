@@ -173,12 +173,7 @@ const Header = () => {
                 >
                   Sign In
                 </Link>
-                <Link
-                  href="/Pricing"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-lg  bg-indigo-600  px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
+               
                 <div>
                   <ThemeToggler />
                 </div>

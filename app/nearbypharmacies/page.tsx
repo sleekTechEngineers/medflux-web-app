@@ -118,6 +118,21 @@ export default function MedicationFinder() {
     }
   }
 
+  // Function to handle phone call
+  const handlePhoneCall = (phoneNumber: string) => {
+    // Clean phone number by removing any non-numeric characters except +
+    const cleanedPhone = phoneNumber.replace(/[^\d+]/g, '');
+    window.location.href = `tel:${cleanedPhone}`;
+  };
+
+  // Function to handle getting directions
+  const handleGetDirections = (address: string, pharmacyName: string) => {
+    // Encode the address for URL
+    const encodedAddress = encodeURIComponent(`${pharmacyName}, ${address}`);
+    // Open Google Maps with directions
+    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  };
+
   return (
     <div className="min-h-screen bg-white my-10 mt-24">
       {/* Hero Section with Search */}
@@ -189,7 +204,7 @@ export default function MedicationFinder() {
                   <h3 className="text-2xl font-bold text-black mb-2">Search Results for "{searchQuery}"</h3>
                   <p className="text-gray-600">
                     Found {searchResults.length} results from {new Set(searchResults.map((r) => r.pharmacy.id)).size}{" "}
-                    pharmacies
+                    pharmacy
                   </p>
                 </div>
 
@@ -282,20 +297,28 @@ export default function MedicationFinder() {
 
                           {/* Action Buttons */}
                           <div className="flex gap-3">
-                            <button className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center">
+                            <button 
+                              onClick={() => handleGetDirections(result.pharmacy.address, result.pharmacy.name)}
+                              className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center"
+                            >
                               <MapPin className="h-4 w-4 mr-2" />
                               Get Directions
                             </button>
                             <button
+                              onClick={() => result.in_stock && result.pharmacy.phone !== "N/A" && handlePhoneCall(result.pharmacy.phone)}
                               className={`flex-1 px-4 py-2 rounded-lg transition-colors flex items-center justify-center ${
-                                result.in_stock
+                                result.in_stock && result.pharmacy.phone !== "N/A"
                                   ? "bg-indigo-600 text-white hover:bg-indigo-700"
                                   : "bg-gray-300 text-gray-500 cursor-not-allowed"
                               }`}
-                              disabled={!result.in_stock}
+                              disabled={!result.in_stock || result.pharmacy.phone === "N/A"}
                             >
                               <Phone className="h-4 w-4 mr-2" />
-                              {result.in_stock ? "Call Pharmacy" : "Out of Stock"}
+                              {result.in_stock 
+                                ? result.pharmacy.phone !== "N/A" 
+                                  ? "Call Pharmacy" 
+                                  : "No Phone Available"
+                                : "Out of Stock"}
                             </button>
                           </div>
                         </div>
