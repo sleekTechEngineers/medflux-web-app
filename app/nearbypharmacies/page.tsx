@@ -126,11 +126,19 @@ export default function MedicationFinder() {
   };
 
   // Function to handle getting directions
-  const handleGetDirections = (address: string, pharmacyName: string) => {
-    // Encode the address for URL
-    const encodedAddress = encodeURIComponent(`${pharmacyName}, ${address}`);
-    // Open Google Maps with directions
-    window.open(`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`, '_blank');
+  const handleGetDirections = (address: string, pharmacyName: string, phone?: string, rating?: number, lat?: number, lng?: number) => {
+    // Navigate to directions page with pharmacy info
+    const params = new URLSearchParams({
+      name: pharmacyName,
+      address: address,
+    });
+    
+    if (phone) params.append('phone', phone);
+    if (rating) params.append('rating', rating.toString());
+    if (lat !== undefined) params.append('lat', lat.toString());
+    if (lng !== undefined) params.append('lng', lng.toString());
+    
+    window.location.href = `/directions?${params.toString()}`;
   };
 
   return (
@@ -154,7 +162,7 @@ export default function MedicationFinder() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  className="w-full pl-10 pr-4 py-3 text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 text-lg border bg-transparent border-indigo-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
                 />
               </div>
               <button
@@ -204,7 +212,7 @@ export default function MedicationFinder() {
                   <h3 className="text-2xl font-bold text-black mb-2">Search Results for "{searchQuery}"</h3>
                   <p className="text-gray-600">
                     Found {searchResults.length} results from {new Set(searchResults.map((r) => r.pharmacy.id)).size}{" "}
-                    pharmacy
+                    pharm...
                   </p>
                 </div>
 
@@ -298,7 +306,14 @@ export default function MedicationFinder() {
                           {/* Action Buttons */}
                           <div className="flex gap-3">
                             <button 
-                              onClick={() => handleGetDirections(result.pharmacy.address, result.pharmacy.name)}
+                              onClick={() => handleGetDirections(
+                                result.pharmacy.address, 
+                                result.pharmacy.name,
+                                result.pharmacy.phone,
+                                result.pharmacy.rating,
+                                result.pharmacy.latitude,
+                                result.pharmacy.longitude
+                              )}
                               className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center"
                             >
                               <MapPin className="h-4 w-4 mr-2" />

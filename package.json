@@ -37,14 +37,14 @@
     "@radix-ui/react-toggle": "1.1.1",
     "@radix-ui/react-toggle-group": "1.1.1",
     "@radix-ui/react-tooltip": "1.1.6",
+    "@react-google-maps/api": "^2.20.7",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
     "date-fns": "4.1.0",
-        "dotenv": "^16.4.5",
-
+    "dotenv": "^16.4.5",
     "embla-carousel-react": "8.5.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
@@ -71,8 +71,7 @@
   "devDependencies": {
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.33",
-        "@vitejs/plugin-react": "^4.0.3",
-
+    "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.16",
     "daisyui": "^4.12.23",
     "mini-css-extract-plugin": "^2.9.2",
@@ -81,7 +80,6 @@
     "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2",
-        "vite": "^4.4.7"
-
+    "vite": "^4.4.7"
   }
 }
