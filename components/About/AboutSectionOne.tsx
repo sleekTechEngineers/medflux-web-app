@@ -35,7 +35,7 @@ const AboutSectionOne = () => {
                 </div>
 
                 <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-600 dark:from-white dark:via-blue-200 dark:to-blue-400 bg-clip-text text-transparent leading-tight">
-                  Revolutionizing Pharmacy Services
+                  Revolutionizing Pharmacy Services.
                 </h1>
 
                 <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
